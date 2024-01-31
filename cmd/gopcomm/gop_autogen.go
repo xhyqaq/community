@@ -497,7 +497,7 @@ func (this *community) MainEntry() {
 //line cmd/gopcomm/community_yap.gox:426:1
 		http.SetCookie(ctx.ResponseWriter, tokenCookie)
 //line cmd/gopcomm/community_yap.gox:429:1
-		http.Redirect(ctx.ResponseWriter, ctx.Request, fmt.Sprintf("http://localhost:8080"), http.StatusFound)
+		http.Redirect(ctx.ResponseWriter, ctx.Request, fmt.Sprintf("/"), http.StatusFound)
 	})
 //line cmd/gopcomm/community_yap.gox:432:1
 	this.Get("/callback", func(ctx *yap.Context) {
@@ -517,7 +517,7 @@ func (this *community) MainEntry() {
 //line cmd/gopcomm/community_yap.gox:447:1
 		http.SetCookie(ctx.ResponseWriter, &cookie)
 //line cmd/gopcomm/community_yap.gox:451:1
-		http.Redirect(ctx.ResponseWriter, ctx.Request, fmt.Sprintf("http://localhost:8080"), http.StatusFound)
+		http.Redirect(ctx.ResponseWriter, ctx.Request, fmt.Sprintf("/"), http.StatusFound)
 	})
 //line cmd/gopcomm/community_yap.gox:454:1
 	conf := &core.Config{}
